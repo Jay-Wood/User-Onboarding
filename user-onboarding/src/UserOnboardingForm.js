@@ -39,7 +39,7 @@ const OnboardForm = ({ errors, touched, values, handleSubmit, status  }) => {
             </Form>
 
             {users.map(user=> (
-                <p key={user.id}>{user.name}</p>
+                <p key={user.id}>UserName: {user.name}</p>
             ))}
         </div>
     )
@@ -65,7 +65,7 @@ const FormikOnboardForm = withFormik({
     handleSubmit(values, { setStatus }) {
         axios
             .post("https://reqres.in/api/users", values)
-            .then(res => console.log("res", res.data.name))
+            // .then(res => console.log("res", res.data.name))
             .then(res => {
                 setStatus(res.data);
             })
