@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import OnboardForm from "./UserOnboardingForm";
+import FormikOnboardForm from "./UserOnboardingForm";
 import axios from "axios";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <h3>User Onboarding with React</h3> 
       </header>
       <div className="App-body">
-      <OnboardForm />
+      <FormikOnboardForm />
       </div>
 
     </div>
