@@ -11,6 +11,7 @@ const OnboardForm = ({ errors, touched, values, handleSubmit, status  }) => {
     useEffect(() => {
         if(status) {
             setUsers([...users, status]);
+            console.log("status",status)
         }
     }, [status]);    
 
