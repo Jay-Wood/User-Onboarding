@@ -35,6 +35,9 @@ const OnboardForm = ({ errors, touched, values, handleSubmit, status  }) => {
                     Agree to Terms of Service
                     <Field type="checkbox" name="terms" checked={values.terms}
                     />
+                    {touched.terms && errors.terms && (
+                    <p className="error"> {errors.terms} </p>
+                    )}
                 </label>
                 <button type="submit">Submit</button>
             </Form>
@@ -60,7 +63,7 @@ const FormikOnboardForm = withFormik({
         name: Yup.string().required("Gotta have that name, yo!"),
         email: Yup.string().email("That ain't no kinda email, son!").required("Gotta have that email, too!"),
         password: Yup.string().min(6,"You can do better than that").required("Quit messin'! Password is required!"),
-        terms: Yup.bool().required("Must agree to Terms & Conditions before continuing.")        
+        terms: Yup.bool().oneOf([true], "Must agree to Terms & Conditions before continuing.")        
     }),
 
     handleSubmit(values, { setStatus }) {
