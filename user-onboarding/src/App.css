@@ -31,3 +31,20 @@
     transform: rotate(360deg);
   }
 }
+
+.user-form{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+Form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  border: 1px solid gray;
+  padding: 2%;
+  margin: 0 auto;
+  
+}

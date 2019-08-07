@@ -3,13 +3,6 @@ import { Form, Field, withFormik } from 'formik';
 import axios from "axios";
 // import * as Yup from 'yup';
 
-// Name
-// Email
-// Password
-// Terms of Service (checkbox)
-// A Submit button to send our form data to the server.
-
-
 const OnboardForm = () => {
 
     return (
@@ -25,7 +18,7 @@ const OnboardForm = () => {
                     //ADD CHECKED={VALUES.TERMS}
                     />
                 </label>
-                <button type="submit">Submit!</button>
+                <button type="submit">Submit</button>
             </Form>
         </div>
     )
@@ -47,10 +40,8 @@ const FormikOnboardForm = withFormik({
             .then(res => console.log("res", res))
             // .then()
             .catch(err => console.log("Error", err));
-
     }
 
 })(OnboardForm);
-
 
 export default FormikOnboardForm;
